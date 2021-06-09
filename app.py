@@ -15,10 +15,14 @@ def home():
 
     # Find one record of data from the mongo database
     destination_data = mongo.db.collection.find_one()
+    print(destination_data)
+
+    news = {}
+    hemisphere_info = {}
 
     # Return template and data
-    return render_template("index.html", planet=destination_data)
-
+    return render_template("index.html",  planet=destination_data)
+    #news = destination_data["news_data"]
 
 # Route that will trigger the scrape function
 @app.route("/scrape")

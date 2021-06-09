@@ -147,7 +147,8 @@ planet_facts_df.set_index(0,inplace= True)
 planet_facts_df
 
 
-# planet_facts_df.to_html
+mars_facts_table = planet_facts_df.to_html
+
 
 # In[2]:
 

@@ -71,7 +71,7 @@ def scrape_info():
         #         print('-------------')
         #         print(title)
         #         print(teaser)
-        print (news_names[0])
+        print (news_names)
 
 
         # In[9]:
@@ -115,15 +115,23 @@ def scrape_info():
         # In[14]:
 
 
-                        # planet_facts_df = tables[0]
-                        # planet_facts_df.set_index(0,inplace= True)
-                        # planet_facts_df
+        planet_facts_df = tables[0]
+        planet_facts_df.set_index(0,inplace= True)
+        planet_facts_df
 
 
         # In[15]:
 
+        list_factors = planet_facts_df[0].to_list()
+        list_factors
 
-                        #planet_facts_df.to_html
+        list_mars = planet_facts_df[1].to_list()
+        list_mars
+
+        list_earth = planet_facts_df[2].to_list()
+        list_earth
+
+        #mars_facts_table = planet_facts_df.to_html()
 
 
         # In[16]:
@@ -150,7 +158,7 @@ def scrape_info():
 
         # In[19]:
 
-
+        #count = 0
         hemisphere_image_urls=[]
         for i in range(len(links)):
                 hemisphere = {}
@@ -168,7 +176,10 @@ def scrape_info():
         mars_data = {
                 "news_names1" : news_names[0],
                 "mars_image" : featured_image_url_final,
-               # "mars_table" : planet_facts_df,
+                #"mars_table" : mars_facts_table,
+                "mars_factors" : list_factors,
+                "mars_mars" : list_mars,
+                "mars_earth" : list_earth,
                 "hemisphere_info": hemisphere_image_urls
         }
 
