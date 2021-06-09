@@ -22,19 +22,23 @@ img {box-shadow: 10px 10px 5px black;}
       <p>Explore Mars through Data</p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
     </div>
-    <h2>Latest Mars News:</h2>
+    <div class="container text-center">
+      <h1 class="jumbotron">Latest Mars News</h1>
     <h3> {{ planet.news_names1.title }}</h3>
     <h3> {{ planet.news_names1.teaser }}</h3>
+  </div>
+    <div class="container text-center">
+      <h1 class="jumbotron">Featured Mars Image</h1>
 
-    <h2>Featured Mars Image:</h2>
     <img src="{{ planet.mars_image }}" alt="Mars Image">
 
-    <h2>Mars Facts:</h2>
-    <div class="container">    
-      <div class="jumbotron col-md-12 col-sm-12">
+
+    </div>
+    <div class="container text-center">    
+      <h1 class="jumbotron col-md-12 col-sm-12"> Mars Facts</h1> 
 
     <table class="overflow-auto" border="1" class="dataframe">
-      <tr>
+      <!-- <tr>
         <th>header1</th>
         <th>header2</th>
         <th>header3</th>
@@ -47,35 +51,36 @@ img {box-shadow: 10px 10px 5px black;}
         <td>data3</td>
       </tr>
       {% endfor %}
-        <tr style="text-align: right;"> -->
+        <tr style="text-align: right;"> --> -->
     {{ planet.mars_table}}
-    </tr>
-    </tbody>
+    <!-- </tr>
+    </tbody> -->
     </table>
 
     </div>
     </div>
 
-
-
-    <h2>Mars Hemispheres:</h2>
-    <div>
-      <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
-        {% for item in inventory %}
-        <div class="col-lg-4">
-            <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h4 class="card-title">{{ item.type }}</h4>
-                  <h6 class="card-subtitle mb-2 text-muted">Cost: {{ item.cost }}</h6>
-                  <p class="card-text">Potential Revenue: {{ item.cost * item.stock}}</p>
+    <div class="container text-center">
+      <h1 class="jumbotron">Mars Hemispheres</h1>
+      <div>
+        <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
+          {% for item in planet.hemisphere_info %}
+          <div class="col-lg-4">
+              <div class="card" style="width: 20rem;">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ item.title }}</h4>
+                    <img src= "{{ item.img_url }}" alt='Hemisphere Image' width="300" height="300" >
+                  </div>
                 </div>
-              </div>
-          </div>
-          {% endfor %}
+            </div>
+            {% endfor %}
 
+      </div>
     </div>
 
-    <h3>{{ planet.hemisphere_info }}</h3>
+    <h3></h3>
+    <h3></h3>
+
   </div>
   </div>
 </body>
