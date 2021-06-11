@@ -36,26 +36,8 @@ img {box-shadow: 10px 10px 5px black;}
     </div>
     <div class="container text-center">    
       <h1 class="jumbotron col-md-12 col-sm-12"> Mars Facts</h1> 
-
-    <table class="overflow-auto" border="1" class="dataframe">
-      <!-- <tr>
-        <th>header1</th>
-        <th>header2</th>
-        <th>header3</th>
-      </tr>
-
-      {% for i in mars_factors %}
-      <tr>
-        <td> {{ i.data }} </td>
-        <td> data2</td>
-        <td>data3</td>
-      </tr>
-      {% endfor %}
-        <tr style="text-align: right;"> --> -->
-    {{ planet.mars_table}}
-    <!-- </tr>
-    </tbody> -->
-    </table>
+      
+    <h3> {{ planet.mars_table | safe }} </h3>
 
     </div>
     </div>

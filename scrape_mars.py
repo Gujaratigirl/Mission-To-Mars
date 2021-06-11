@@ -131,8 +131,8 @@ def scrape_info():
         # list_earth = planet_facts_df[2].to_list()
         # list_earth
 
-        #mars_facts_table = planet_facts_df.to_html()
-
+        mars_facts_table = planet_facts_df.to_html()
+       
 
         # In[16]:
 
@@ -176,7 +176,7 @@ def scrape_info():
         mars_data = {
                 "news_names1" : news_names[0],
                 "mars_image" : featured_image_url_final,
-                #"mars_table" : mars_facts_table,
+                "mars_table" : mars_facts_table,
                 # "mars_factors" : list_factors,
                 # "mars_mars" : list_mars,
                 # "mars_earth" : list_earth,
