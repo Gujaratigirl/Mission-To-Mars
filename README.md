@@ -7,7 +7,7 @@
 -Table of Mars facts.     
 -Images of Mars' hemispheres.     
 
-##Linked all of this together
+## Linked all of this together
 
 -index.html.    
 -scrape_mars.py.    
