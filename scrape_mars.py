@@ -116,7 +116,8 @@ def scrape_info():
 
 
         planet_facts_df = tables[0]
-        planet_facts_df.set_index(0,inplace= True)
+        planet_facts_df.columns=['Facts',' Mars', 'Earth']
+        planet_facts_df.set_index('Facts',inplace= True)
         planet_facts_df
 
 
